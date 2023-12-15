@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page de Cadres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Empêche le défilement horizontal dû à l'animation */
+        }
+
+        header {
+            background-color: #693939; /* Couleur dorée */
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+        }
+        body, main {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: visible;
+        }
+                main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+            background: url('images/150711.jpg') center fixed; /* Image de fond qui bouge */
+            background-size: cover;
+        }
+
+        .cadre {
+            
+            position: relative;
+            /*z-index: 1;*/
+
+
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+        }
+
+        .cadre img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #693939;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        @keyframes moveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 100%;
+            }
+        }
+        h2 {
+    position: relative;
+}
+.cadre img {
+    max-width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cadre img:hover {
+    transform: scale(1.1);
+}
+
+        main {
+            animation: moveBackground 20s infinite linear; /* Animation de l'image de fond */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cadres de Dessin</h1>
+    </header>
+
+    <main>
+
+        <div class="cadre">
+            <img src="" alt="Cadre 1">
+            <h2></h2>
+            <p> </p>
+           
+        </div>
+
+        <div class="cadre">
+            <img src="" alt="Cadre 2">
+            <h2></h2>
+            
+            
+        </div>
+
+        <div class="cadre">
+            <img src="" alt="Cadre 3">
+            <h2></h2>
+            <p></p>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@iamasiamme" target="_blank">TikTok</a>
+            <a href="https://www.instagram.com/lidia___sd/" target="_blank">Instagram</a>
+        </div>
+        <p>Politique de Confidentialité | Votre Entreprise &copy; 2023</p>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    // Ajoutez du JavaScript pour gérer le clic sur l'image et afficher en taille réelle
+    document.querySelectorAll('.cadre img').forEach(function (image) {
+        image.addEventListener('click', function () {
+            window.open(image.src, '_blank');
+        });
+    });
+</script>
